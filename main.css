@@ -20,12 +20,15 @@ fieldset label{
 table {
     margin: auto;
     width: auto;
+    min-width: 10rem;
 }
 
 th{
     text-align: left;
+    min-width: 5rem;
 }
 
 td{
     text-align: right;
+    min-width: 5rem;
 }

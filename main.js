@@ -3,7 +3,7 @@ const cupRadio = document.querySelector('input[value="cup"]');
 const toppingsFieldset = document.querySelector('#Toppings');
 
 function toggleFieldset() {
-  if (cupRadio.checked) {
+  if (coneRadio.checked) {
     toppingsFieldset.style.display = 'none';
   } else {
     toppingsFieldset.style.display = 'block';
