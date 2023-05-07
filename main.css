@@ -41,6 +41,12 @@ h1 {
     color: aqua;
 }
 
-
-
+img {
+    width: 300px;
+    border-radius: 150px;
+    height: 300px;
+    margin-right: 1em;
+    margin-top: 1em;
+    object-fit: cover;
+}
   
