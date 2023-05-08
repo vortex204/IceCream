@@ -1,19 +1,19 @@
 const coneRadio = document.querySelector('input[value="cone"]');
 const cupRadio = document.querySelector('input[value="cup"]');
-const toppingsFieldset = document.querySelector('#Toppings');
+const toppingsFieldset = document.querySelector("#Toppings");
 
 function toggleFieldset() {
   if (coneRadio.checked) {
-    toppingsFieldset.style.display = 'none';
+    toppingsFieldset.style.display = "none";
   } else {
-    toppingsFieldset.style.display = 'block';
+    toppingsFieldset.style.display = "block";
   }
 }
 
 toggleFieldset();
 
-coneRadio.addEventListener('change', toggleFieldset);
-cupRadio.addEventListener('change', toggleFieldset);
+coneRadio.addEventListener("change", toggleFieldset);
+cupRadio.addEventListener("change", toggleFieldset);
 
 const order = document.getElementById("order");
 order.addEventListener("click", () => {
@@ -25,14 +25,21 @@ order.addEventListener("click", () => {
 
   function calculatePrice() {
     const numScoops = parseInt(scoops);
-    const containerPrice = 2.25 + ((numScoops - 1) * 1.25);
-    const toppingsPrice = calculateToppingsPrice(sprinkles, hotFudge, whippedCream, cherry);
+    const containerPrice = 2.25 + (numScoops - 1) * 1.25;
+    const toppingsPrice = calculateToppingsPrice(
+      sprinkles,
+      hotFudge,
+      whippedCream,
+      cherry
+    );
     const totalPrice = containerPrice + toppingsPrice;
     const tax = totalPrice * 0.08;
     const totalPriceWithTax = totalPrice + tax;
-    document.getElementById("price").textContent = '$' + containerPrice.toFixed(2);
-    document.getElementById("tax").textContent = '$' + tax.toFixed(2);
-    document.getElementById("total").textContent = '$' + totalPriceWithTax.toFixed(2);
+    document.getElementById("price").textContent =
+      "$" + containerPrice.toFixed(2);
+    document.getElementById("tax").textContent = "$" + tax.toFixed(2);
+    document.getElementById("total").textContent =
+      "$" + totalPriceWithTax.toFixed(2);
   }
 
   calculatePrice();
